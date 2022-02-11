@@ -1,0 +1,19 @@
+<div class="fixed">
+    <form class="box flex__block" [formGroup]="form">
+    <label for="robot__name" class="box flex__block">Add a new robot:</label>
+    <input 
+    type="text"
+    id="robot__name" 
+    placeholder="[Name]" 
+    formControlName="name"
+    >
+    <button class="flex__block" (click)="submitForm()">Add</button>
+    </form>
+</div>
+<div class="robots">
+    <ul *ngFor="let robot of robots">
+        <li>
+            <app-robot [robot]="robot"></app-robot>
+        </li>
+    </ul>
+</div>
